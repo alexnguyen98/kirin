@@ -1,0 +1,16 @@
+name: kirin
+description: A Flutter UI toolkit
+version: 0.0.1
+homepage: https://www.notion.so/spaceoddyssey/d49565c7367442139870cca1ba74f099?v=fef039ca03ae4fa2bacbc6527ba97955
+
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
