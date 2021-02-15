@@ -1,4 +1,5 @@
 library kirin;
 
-export 'src/Button.dart';
-export 'src/Heading.dart';
+export 'src/widgets/Button.dart';
+export 'src/widgets/Heading.dart';
+export 'src/widgets/Input.dart';
