@@ -1,15 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoadingToast {
-  LoadingToast(this.context);
-
+class KirinToast {
   final BuildContext context;
+  final String text;
 
-  void show(String text) {
+  KirinToast(this.context, this.text);
+
+  void show() {
     showDialog(
         context: context,
         barrierDismissible: false,
+        barrierColor: Colors.transparent,
         builder: (BuildContext context) {
           return Center(
             child: Container(
@@ -17,8 +18,8 @@ class LoadingToast {
               width: 130.0,
               height: 130.0,
               decoration: BoxDecoration(
-                  color: Colors.grey.shade900.withOpacity(0.8),
-                  borderRadius: BorderRadius.circular(10)),
+                  color: Colors.grey.shade900.withOpacity(0.9),
+                  borderRadius: BorderRadius.circular(12)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -30,8 +31,8 @@ class LoadingToast {
                       style: TextStyle(
                           decoration: TextDecoration.none,
                           color: Colors.white,
-                          fontFamily: 'Poppins',
-                          fontSize: 14,
+                          fontFamily: 'Nunito Sans',
+                          fontSize: 16,
                           fontWeight: FontWeight.w400))
                 ],
               ),

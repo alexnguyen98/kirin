@@ -1,7 +1,11 @@
 library kirin;
 
-export 'src/widgets/Button.dart';
-export 'src/widgets/Heading.dart';
-export 'src/widgets/Input.dart';
+// TODO: create a material app wrapper with custom theme color and font integration
 
-export 'src/utils/LoadingToast.dart';
+export 'src/widgets/KirinButton.dart';
+export 'src/widgets/KirinHeading.dart';
+export 'src/widgets/KirinInput.dart';
+
+export 'src/utils/KirinToast.dart';
+export 'src/utils/KirinDialog.dart';
+export 'src/utils/KirinDialogAction.dart';

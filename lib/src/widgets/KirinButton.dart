@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 // https://api.flutter.dev/flutter/material/RawMaterialButton-class.html
 
-class Button extends StatelessWidget {
+class KirinButton extends StatelessWidget {
   final String text;
   final bool disabled;
   final VoidCallback onPressed;
 
-  Button(this.text, {this.disabled = false, this.onPressed, Key key})
+  KirinButton(this.text, {this.disabled = false, this.onPressed, Key key})
       : assert(text != null),
         super(key: key);
 
@@ -20,16 +20,16 @@ class Button extends StatelessWidget {
         disabledElevation: 0,
         highlightElevation: 0,
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         padding: const EdgeInsets.symmetric(vertical: 15.0),
         splashColor: Colors.transparent,
-        fillColor: disabled ? Colors.grey.shade300 : Colors.green.shade700,
+        fillColor: disabled ? Colors.grey.shade300 : Colors.green.shade600,
         child: Text(text,
             style: TextStyle(
                 color: disabled ? Colors.grey.shade500 : Colors.white,
-                fontFamily: 'Poppins',
-                fontSize: 20,
-                fontWeight: FontWeight.w600)),
+                fontFamily: 'Nunito Sans',
+                fontSize: 18,
+                fontWeight: FontWeight.w500)),
       ),
     );
   }
