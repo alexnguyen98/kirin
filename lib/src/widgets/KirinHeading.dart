@@ -13,15 +13,17 @@ class KirinHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          text,
-          textAlign: TextAlign.left,
-          style: TextStyle(
-              letterSpacing: -0.5,
-              fontFamily: 'Nunito Sans',
-              fontSize: 25,
-              fontWeight: FontWeight.w800),
-        ));
+      alignment: Alignment.centerLeft,
+      child: Text(
+        text,
+        textAlign: TextAlign.left,
+        style: TextStyle(
+          letterSpacing: -0.5,
+          fontFamily: 'Nunito Sans',
+          fontSize: 25,
+          fontWeight: FontWeight.w800,
+        ),
+      ),
+    );
   }
 }

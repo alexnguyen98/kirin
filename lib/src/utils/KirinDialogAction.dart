@@ -11,17 +11,21 @@ class KirinDialogAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: RawMaterialButton(
-      onPressed: onPressed,
-      disabledElevation: 0,
-      highlightElevation: 0,
-      elevation: 0,
-      padding: EdgeInsets.symmetric(vertical: 15),
-      child: Text(text,
+      child: RawMaterialButton(
+        onPressed: onPressed,
+        disabledElevation: 0,
+        highlightElevation: 0,
+        elevation: 0,
+        padding: EdgeInsets.symmetric(vertical: 15),
+        child: Text(
+          text,
           style: TextStyle(
-              fontFamily: 'Nunito Sans',
-              fontSize: 16,
-              fontWeight: FontWeight.w500)),
-    ));
+            fontFamily: 'Nunito Sans',
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
   }
 }
