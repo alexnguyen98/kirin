@@ -7,8 +7,12 @@ class KirinButton extends StatelessWidget {
   final bool disabled;
   final VoidCallback onPressed;
 
-  KirinButton(this.text, {this.disabled = false, this.onPressed, Key key})
-      : assert(text != null),
+  KirinButton(
+    this.text, {
+    this.disabled = false,
+    this.onPressed,
+    Key key,
+  })  : assert(text != null),
         super(key: key);
 
   @override
@@ -20,16 +24,21 @@ class KirinButton extends StatelessWidget {
         disabledElevation: 0,
         highlightElevation: 0,
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
         padding: const EdgeInsets.symmetric(vertical: 15.0),
         splashColor: Colors.transparent,
         fillColor: disabled ? Colors.grey.shade300 : Colors.green.shade600,
-        child: Text(text,
-            style: TextStyle(
-                color: disabled ? Colors.grey.shade500 : Colors.white,
-                fontFamily: 'Nunito Sans',
-                fontSize: 18,
-                fontWeight: FontWeight.w500)),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: disabled ? Colors.grey.shade500 : Colors.white,
+            fontFamily: 'Nunito Sans',
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
       ),
     );
   }
