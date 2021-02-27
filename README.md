@@ -22,13 +22,13 @@ flutter:
   fonts:
     - family: Noto Sans
       fonts:
-        - asset: packages/kirin/font/NunitoSans-Bold.ttf
-        - asset: packages/kirin/font/NunitoSans-SemiBold.ttf
-        - asset: packages/kirin/font/NunitoSans-Regular.ttf
+        - asset: packages/kirin/assets/fonts/NunitoSans-Bold.ttf
+        - asset: packages/kirin/assets/fonts/NunitoSans-SemiBold.ttf
+        - asset: packages/kirin/assets/fonts/NunitoSans-Regular.ttf
           style: normal
 ```
 
-2. **Import package**
+3. **Import package**
 
 ```dart
 import 'package:kirin/kirin.dart';
