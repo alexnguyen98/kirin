@@ -32,8 +32,8 @@ class KirinDialog {
     return list;
   }
 
-  void show() {
-    showDialog(
+  Future<Widget> show() async {
+    return showDialog(
       context: context,
       barrierDismissible: false,
       builder: (BuildContext _ctx) {

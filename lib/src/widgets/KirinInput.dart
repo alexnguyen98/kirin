@@ -39,21 +39,21 @@ class _InputState extends State<KirinInput> {
       },
       child: Column(
         children: [
-          widget.label != null ??
-              Padding(
-                padding: const EdgeInsets.only(bottom: 5),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    widget.label,
-                    style: TextStyle(
-                      fontFamily: 'Nunito Sans',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                    ),
+          if (widget.label != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  widget.label,
+                  style: TextStyle(
+                    fontFamily: 'Nunito Sans',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
                   ),
                 ),
               ),
+            ),
           Container(
             decoration: BoxDecoration(
                 borderRadius: new BorderRadius.circular(6.0),

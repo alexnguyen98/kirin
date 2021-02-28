@@ -6,8 +6,8 @@ class KirinToast {
 
   KirinToast(this.context, this.text);
 
-  void show() {
-    showDialog(
+  Future<Widget> show() async {
+    return showDialog(
       context: context,
       barrierDismissible: false,
       barrierColor: Colors.transparent,
@@ -48,5 +48,15 @@ class KirinToast {
 
   void hide() {
     Navigator.of(context).pop();
+  }
+
+  Future<void> pop({int durationSeconds = 3}) async {
+    show();
+    return Future.delayed(
+      Duration(
+        seconds: durationSeconds,
+      ),
+      () => hide(),
+    );
   }
 }
