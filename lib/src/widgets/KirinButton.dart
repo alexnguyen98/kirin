@@ -29,7 +29,7 @@ class KirinButton extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(vertical: 15.0),
         splashColor: Colors.transparent,
-        fillColor: disabled ? Colors.grey.shade300 : Colors.green.shade600,
+        fillColor: disabled ? Colors.grey.shade300 : Colors.black,
         child: Text(
           text,
           style: TextStyle(
