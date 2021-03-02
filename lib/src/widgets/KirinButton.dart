@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 
 // https://api.flutter.dev/flutter/material/RawMaterialButton-class.html
 
@@ -29,13 +30,13 @@ class KirinButton extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(vertical: 15.0),
         splashColor: Colors.transparent,
-        fillColor: disabled ? Colors.grey.shade300 : Colors.black,
+        fillColor: disabled ? Colors.grey[300] : FontColor.black,
         child: Text(
           text,
           style: TextStyle(
-            color: disabled ? Colors.grey.shade500 : Colors.white,
+            color: disabled ? Colors.grey[500] : FontColor.white,
             fontFamily: 'Nunito Sans',
-            fontSize: 18,
+            fontSize: FontSize.large,
             fontWeight: FontWeight.w500,
           ),
         ),

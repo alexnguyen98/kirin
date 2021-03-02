@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 
 // TODO: centralise text style
 // https://api.flutter.dev/flutter/widgets/Text-class.html
@@ -20,7 +21,7 @@ class KirinHeading extends StatelessWidget {
         style: TextStyle(
           letterSpacing: -0.5,
           fontFamily: 'Nunito Sans',
-          fontSize: 25,
+          fontSize: FontSize.extraLarge,
           fontWeight: FontWeight.w700,
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 
 class KirinDialogAction extends StatelessWidget {
   final String text;
@@ -21,7 +22,7 @@ class KirinDialogAction extends StatelessWidget {
           text,
           style: TextStyle(
             fontFamily: 'Nunito Sans',
-            fontSize: 16,
+            fontSize: FontSize.medium,
             fontWeight: FontWeight.w500,
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 
 // https://api.flutter.dev/flutter/widgets/Text-class.html
 
@@ -49,7 +50,7 @@ class _InputState extends State<KirinInput> {
                   style: TextStyle(
                     fontFamily: 'Nunito Sans',
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                    fontSize: FontSize.large,
                   ),
                 ),
               ),
@@ -68,34 +69,34 @@ class _InputState extends State<KirinInput> {
               controller: _controller,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
-                fillColor: Colors.white,
+                fillColor: FontColor.white,
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(6.0),
                   borderSide: BorderSide(
                     width: 1,
-                    color: Colors.grey.shade300,
+                    color: FontColor.lightGrey,
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(6.0),
                   borderSide: BorderSide(
                     width: 1,
-                    color: Colors.grey.shade300,
+                    color: FontColor.lightGrey,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(6.0),
                   borderSide: BorderSide(
                     width: 1,
-                    color: Colors.grey.shade300,
+                    color: FontColor.lightGrey,
                   ),
                 ),
                 hintText: widget.placeholder,
                 suffixIcon: _controller.text.isNotEmpty
                     ? IconButton(
                         onPressed: () => _controller.clear(),
-                        icon: Icon(Icons.clear, color: Colors.grey.shade400),
+                        icon: Icon(Icons.clear, color: FontColor.grey),
                       )
                     : null,
               ),

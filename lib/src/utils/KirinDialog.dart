@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 import 'package:kirin/src/utils/KirinDialogAction.dart';
 
 class KirinDialog {
@@ -14,34 +15,44 @@ class KirinDialog {
     this.actions,
   );
 
-  List<Widget> getActions() {
+  Widget getActionsWidget() {
     List<Widget> list = [];
+
+    Widget divider = (actions.length > 2)
+        ? (Divider(
+            color: Colors.grey.shade200,
+            thickness: 1,
+            height: 1,
+          ))
+        : (VerticalDivider(
+            color: Colors.grey.shade200,
+            thickness: 1,
+            width: 1,
+          ));
+
     for (var i = 0; i < (actions.length); i++) {
       list.add(actions[i]);
       // skip the last divider
       if (i != actions.length - 1) {
-        list.add(
-          VerticalDivider(
-            color: Colors.grey.shade200,
-            thickness: 1,
-            width: 1,
-          ),
-        );
+        list.add(divider);
       }
     }
-    return list;
+
+    return (actions.length > 2)
+        ? Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: list)
+        : Row(children: list);
   }
 
   Future<Widget> show() async {
     return showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (BuildContext _ctx) {
+      builder: (BuildContext context) {
         return Center(
           child: Container(
             width: 280.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: FontColor.white,
               borderRadius: BorderRadius.circular(12),
             ),
             child: IntrinsicHeight(
@@ -53,7 +64,7 @@ class KirinDialog {
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                          color: Colors.grey.shade200,
+                          color: FontColor.lightGrey,
                         ),
                       ),
                     ),
@@ -65,7 +76,7 @@ class KirinDialog {
                             decoration: TextDecoration.none,
                             color: Colors.black,
                             fontFamily: 'Nunito Sans',
-                            fontSize: 16,
+                            fontSize: FontSize.medium,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -74,19 +85,15 @@ class KirinDialog {
                           description,
                           style: TextStyle(
                             decoration: TextDecoration.none,
-                            color: Colors.grey.shade800,
-                            fontSize: 16,
+                            color: FontColor.darkGrey,
+                            fontSize: FontSize.medium,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  IntrinsicHeight(
-                    child: Row(
-                      children: getActions(),
-                    ),
-                  )
+                  IntrinsicHeight(child: getActionsWidget())
                 ],
               ),
             ),

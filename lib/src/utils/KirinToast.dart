@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirin/src/constants/KirinTextConstants.dart';
 
 enum KirinToastStatus { loading, success }
 
@@ -13,13 +14,13 @@ class KirinToast {
     switch (icon) {
       case KirinToastStatus.loading:
         return CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+          valueColor: AlwaysStoppedAnimation<Color>(FontColor.white),
         );
         break;
       case KirinToastStatus.success:
         return Icon(
           Icons.check_rounded,
-          color: Colors.white,
+          color: FontColor.white,
           size: 50,
           semanticLabel: 'Success icon',
         );
@@ -51,9 +52,9 @@ class KirinToast {
                   text,
                   style: TextStyle(
                     decoration: TextDecoration.none,
-                    color: Colors.white,
+                    color: FontColor.white,
                     fontFamily: 'Nunito Sans',
-                    fontSize: 16,
+                    fontSize: FontSize.medium,
                     fontWeight: FontWeight.w400,
                   ),
                 )
