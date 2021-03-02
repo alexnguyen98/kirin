@@ -28,11 +28,15 @@ flutter:
           style: normal
 ```
 
-3. **Import package**
+3. **Import the package**
 
 ```dart
 import 'package:kirin/kirin.dart';
 ```
+
+## Demo Application
+
+Technical demo of Kirin UI is available [here](https://github.com/ryzzaki/kirin-demo)
 
 ## 📝 Licence
 

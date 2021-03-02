@@ -21,7 +21,7 @@ class KirinHeading extends StatelessWidget {
           letterSpacing: -0.5,
           fontFamily: 'Nunito Sans',
           fontSize: 25,
-          fontWeight: FontWeight.w800,
+          fontWeight: FontWeight.w700,
         ),
       ),
     );
